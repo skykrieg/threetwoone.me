@@ -7,14 +7,26 @@
 @import 'vars';
 @import 'mixins';
 
-/* BG */
+/* Wrapper */
 
-	@include bg($bg-width * 0.275);
+	#wrapper {
+		opacity: 1;
+	}
+	
+/* Overlay */
+
+	#overlay {
+		opacity: 1;
+	}
 	
 /* Header */
-	
+
 	#header {
+		opacity: 1;
+
 		nav {
-			padding: 0 1em;
+			li {
+				opacity: 1;
+			}
 		}
 	}

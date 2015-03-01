@@ -4,17 +4,24 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-@import 'vars';
-@import 'mixins';
+/* Wrapper */
 
-/* BG */
-
-	@include bg($bg-width * 0.275);
-	
-/* Header */
-	
-	#header {
-		nav {
-			padding: 0 1em;
-		}
+	#wrapper {
+		opacity: 1;
 	}
+
+/* Overlay */
+
+	#overlay {
+		opacity: 1;
+	}
+
+/* Header */
+
+	#header {
+		opacity: 1;
+	}
+
+		#header nav li {
+			opacity: 1;
+		}

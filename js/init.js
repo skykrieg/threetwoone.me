@@ -1,5 +1,5 @@
 /*
-	Alpha by HTML5 UP
+	Verti by HTML5 UP
 	html5up.net | @n33co
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
@@ -9,46 +9,36 @@
 	skel.init({
 		reset: 'full',
 		breakpoints: {
-			global:		{ range: '*', href: 'css/style.css', containers: '60em', grid: { gutters: ['2em', 0] } },
-			wide:		{ range: '-1680', href: 'css/style-wide.css' },
-			normal:		{ range: '-1280', href: 'css/style-normal.css', viewport: { scalable: false } },
-			narrow:		{ range: '-980', href: 'css/style-narrow.css', containers: '90%' },
-			narrower:	{ range: '-840', href: 'css/style-narrower.css', containers: '90%!' },
-			mobile:		{ range: '-736', href: 'css/style-mobile.css', containers: '100%!' },
-			mobilep:	{ range: '-480', href: 'css/style-mobilep.css' }
+			'global':	{ range: '*', href: 'css/style.css' },
+			'desktop':	{ range: '737-', href: 'css/style-desktop.css', containers: 1200, grid: { gutters: 40 } },
+			'1000px':	{ range: '737-1200', href: 'css/style-1000px.css', containers: 960, grid: { gutters: 25 }, viewport: { width: 1080 } },
+			'mobile':	{ range: '-736', href: 'css/style-mobile.css', containers: '100%!', grid: { collapse: true, gutters: 20 }, viewport: { scalable: false } }
 		},
 		plugins: {
 			layers: {
-
-				// Config.
-					config: {
-						mode: function() { return (skel.vars.isMobile ? 'transform' : 'position'); }
-					},
-
-				// Navigation Panel.
-					navPanel: {
-						animation: 'pushX',
-						breakpoints: 'narrower',
-						clickToHide: true,
-						height: '100%',
-						hidden: true,
-						html: '<div data-action="navList" data-args="nav"></div>',
-						orientation: 'vertical',
-						position: 'top-left',
-						side: 'left',
-						width: 250
-					},
-
-				// Navigation Button.
-					navButton: {
-						breakpoints: 'narrower',
-						height: '4em',
-						html: '<span class="toggle" data-action="toggleLayer" data-args="navPanel"></span>',
-						position: 'top-left',
-						side: 'top',
-						width: '6em'
-					}
-
+				config: {
+					mode: 'transform'
+				},
+				navPanel: {
+					hidden: true,
+					breakpoints: 'mobile',
+					position: 'top-left',
+					side: 'left',
+					animation: 'pushX',
+					width: '80%',
+					height: '100%',
+					clickToHide: true,
+					html: '<div data-action="navList" data-args="nav"></div>',
+					orientation: 'vertical'
+				},
+				titleBar: {
+					breakpoints: 'mobile',
+					position: 'top-left',
+					side: 'top',
+					height: 44,
+					width: '100%',
+					html: '<span class="toggle" data-action="toggleLayer" data-args="navPanel"></span><span class="title" data-action="copyHTML" data-args="logo"></span>'
+				}
 			}
 		}
 	});
@@ -56,9 +46,14 @@
 	$(function() {
 
 		var	$window = $(window),
-			$body = $('body'),
-			$header = $('#header'),
-			$banner = $('#banner');
+			$body = $('body');
+
+		// Disable animations/transitions until the page has loaded.
+			$body.addClass('is-loading');
+
+			$window.on('load', function() {
+				$body.removeClass('is-loading');
+			});
 
 		// Forms (IE<10).
 			var $form = $('form');
@@ -79,30 +74,10 @@
 
 		// Dropdowns.
 			$('#nav > ul').dropotron({
-				alignment: 'right'
+				mode: 'fade',
+				noOpenerFade: true,
+				speed: 300
 			});
-
-		// Header.
-		// If the header is using "alt" styling and #banner is present, use scrollwatch
-		// to revert it back to normal styling once the user scrolls past the banner.
-		// Note: This is disabled on mobile devices.
-			if (!skel.vars.isMobile
-			&&	$header.hasClass('alt')
-			&&	$banner.length > 0) {
-
-				$window.on('load', function() {
-
-					$banner.scrollwatch({
-						delay:		0,
-						range:		0.5,
-						anchor:		'top',
-						on:			function() { $header.addClass('alt reveal'); },
-						off:		function() { $header.removeClass('alt'); }
-					});
-
-				});
-
-			}
 
 	});
 

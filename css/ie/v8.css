@@ -1,161 +1,125 @@
 /*
-	Alpha by HTML5 UP
+	Verti by HTML5 UP
 	html5up.net | @n33co
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-/* Basic */
+/*********************************************************************************/
+/* Basic                                                                         */
+/*********************************************************************************/
 
-	pre, code {
-		position: relative;
-		-ms-behavior: url("css/ie/PIE.htc");
+	body
+	{
+		background-color: #f0f0f0;
 	}
 
-/* Form */
+	/* Image */
 
-	input[type="text"],
-	input[type="password"],
-	input[type="email"],
-	select,
-	textarea {
-		position: relative;
-		-ms-behavior: url("css/ie/PIE.htc");
-		line-height: 3em;
-	}
-
-	input[type="checkbox"],
-	input[type="radio"] {
-		opacity: 1;
-		z-index: auto;
-	}
-
-		input[type="checkbox"] + label:before,
-		input[type="radio"] + label:before {
-			display: none;
+		.image
+		{
 		}
+		
+			.image img
+			{
+				position: relative;
+				-ms-behavior: url('css/ie/PIE.htc');
+			}
+	
+	/* Button */
 
-/* Button */
-
-	input[type="submit"],
-	input[type="reset"],
-	input[type="button"],
-	.button {
-		position: relative;
-		-ms-behavior: url("css/ie/PIE.htc");
-	}
-
-		input[type="submit"].alt,
-		input[type="reset"].alt,
-		input[type="button"].alt,
-		.button.alt {
-			border: solid 2px #e5e5e5;
-		}
-
-/* Box */
-
-	.box {
-		position: relative;
-		-ms-behavior: url("css/ie/PIE.htc");
-	}
-
-		.box .image.featured {
-			margin: 2em 0;
-			width: 100%;
-		}
-
-/* Icon */
-
-	.icon.major {
-		position: relative;
-		-ms-behavior: url("css/ie/PIE.htc");
-	}
-
-/* Image */
-
-	.image {
-		position: relative;
-		-ms-behavior: url("css/ie/PIE.htc");
-	}
-
-		.image img {
+		input[type="button"],
+		input[type="submit"],
+		input[type="reset"],
+		.button
+		{
 			position: relative;
-			-ms-behavior: url("css/ie/PIE.htc");
+			-ms-behavior: url('css/ie/PIE.htc');
 		}
 
-/* Header */
+	/* Box */
 
-	#header nav > ul > li a {
-		color: #fff;
-		display: inline-block;
-		text-decoration: none;
-		border: 0;
+		.box
+		{
+			position: relative;
+			-ms-behavior: url('css/ie/PIE.htc');
+		}
+
+/*********************************************************************************/
+/* Widgets                                                                       */
+/*********************************************************************************/
+
+	.widget
+	{
 	}
 
-		#header nav > ul > li a.icon:before {
-			color: #fff;
-			margin-right: 0.5em;
+		.widget.contact
+		{
 		}
+		
+			.widget.contact ul
+			{
+			}
+			
+				.widget.contact ul li
+				{
+				}
 
-	#header.alt {
-		color: #fff;
+					.widget.contact ul li a
+					{
+						position: relative;
+						-ms-behavior: url('css/ie/PIE.htc');
+					}
+
+/*********************************************************************************/
+/* Logo                                                                          */
+/*********************************************************************************/
+
+	#logo
+	{
 	}
 
-		#header.alt nav > ul > li a:not(.button).icon:before {
-			color: rgba(255, 255, 255, 0.75);
+		#logo h1
+		{
+			position: relative;
+			-ms-behavior: url('css/ie/PIE.htc');
 		}
+						
+/*********************************************************************************/
+/* Nav                                                                           */
+/*********************************************************************************/
 
-		#header.alt nav > ul > li.active a:not(.button) {
-			background-color: rgba(255, 255, 255, 0.2);
-		}
-
-	.dropotron {
-		border: solid 1px #e5e5e5;
+	#nav
+	{
 	}
-
-		.dropotron.level-0 {
-			margin-top: 0;
+	
+		#nav ul
+		{
 		}
-
-			.dropotron.level-0:before {
-				display: none;
+			
+			#nav ul li
+			{
 			}
 
-/* Banner */
-
-	#banner {
-		background-attachment: scroll;
-		background-image: url("../../images/banner.jpg");
-		background-position: auto;
-		background-repeat: no-repeat;
-		background-size: cover;
-		-ms-behavior: url("css/ie/backgroundsize.min.htc");
+				#nav ul li a,
+				#nav ul li span
+				{
+					position: relative;
+					-ms-behavior: url('css/ie/PIE.htc');
+				}
+				
+	.dropotron
+	{
+		border: solid 1px #eee;
+		box-shadow: none !important;
+		-ms-behavior: url('css/ie/PIE.htc');
 	}
-
-		#banner input[type="submit"],
-		#banner input[type="reset"],
-		#banner input[type="button"],
-		#banner .button {
-			border: solid 2px #fff;
+	
+		.dropotron.level-0
+		{
+			box-shadow: none !important;
 		}
-
-/* Main */
-
-	#main {
-		position: relative;
-		z-index: 1;
-	}
-
-/* CTA */
-
-	#cta input[type="text"],
-	#cta input[type="password"],
-	#cta input[type="email"],
-	#cta select,
-	#cta textarea {
-		background: #e89980;
-		border: solid 2px #fff;
-	}
-
-	#cta .formerize-placeholder {
-		color: #fff !important;
-	}
+		
+			.dropotron.level-0:before
+			{
+				display: none;
+			}

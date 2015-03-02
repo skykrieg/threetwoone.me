@@ -5,49 +5,32 @@
 */
 
 /*********************************************************************************/
-/* Basic                                                                        */
+/* Basic                                                                         */
 /*********************************************************************************/
 
 	.button
 	{
-		-ms-behavior: url('css/ie/PIE.htc');
+		background-image: url('images/grad0-20.svg');
 	}
-
-	.image
+	
+	.box-feature1
 	{
 	}
 	
-		.image img
+		.box-feature1 header.second
 		{
-			-ms-behavior: url('css/ie/PIE.htc');
+			left: 0;
 		}
-		
+
 /*********************************************************************************/
 /* Wrappers                                                                      */
 /*********************************************************************************/
 
-	#header-wrapper
+	#footer-wrapper
 	{
-		background: url('../../images/header.jpg');
-		background-position: center center;
-		background-size: cover;
-		-ms-behavior: url('css/ie/backgroundsize.min.htc');
+		background-image: url('images/grad0-35.svg');
 	}
-
-	#main-wrapper
-	{
-	}
-
-		#main-wrapper .main-wrapper-style1
-		{
-			background: #f8f8f8;
-		}
-
-		#main-wrapper .main-wrapper-style3
-		{
-			background: #f8f8f8;
-		}
-
+		
 /*********************************************************************************/
 /* Header                                                                        */
 /*********************************************************************************/
@@ -55,24 +38,31 @@
 	#header
 	{
 	}
-	
+
 		#header .inner
 		{
-			-ms-behavior: url('css/ie/PIE.htc');
+			background-image: url('images/grad0-35.svg');
 		}
-	
+
 /*********************************************************************************/
 /* Nav                                                                           */
 /*********************************************************************************/
-
+	
 	.dropotron
 	{
-		box-shadow: 0;
-		-ms-behavior: url('css/ie/PIE.htc');
+		background-image: url('images/grad35-0.svg');
 	}
 	
-	.dropotron.level-0
+/*********************************************************************************/
+/* Mobile UI                                                                     */
+/*********************************************************************************/
+
+	#titleBar
 	{
-		box-shadow: 0;
-		-ms-behavior: url('css/ie/PIE.htc');
+		background-image: url('images/grad0-35.svg');
+	}
+
+	#navPanel
+	{
+		background-image: url('images/grad0-35.svg');
 	}
